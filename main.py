@@ -1,8 +1,7 @@
-def number_to_word(number: int):
-    units = ["یک", "دو", "سه", "چهار", "پنج", "شش", "هفت", "هشت", "نه"]
-    tens = ["ده", "بیست", "سی", "چهل", "پنجاه", "شصت", "هفتاد", "هشتاد", "نود"]
-    hundreds = ["صد", "دویست", "سیصد", "چهارصد", "پانصد", "ششصد", "هفتصد", "هشتصد", "نهصد", "", "", ""]
+from num2words import num2words
 
-    group = number % 1000
-    print(group)
-    
+def number_to_word(number: int):
+    return num2words(number, lang="fa")
+
+
+print(number_to_word(12345))
